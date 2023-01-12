@@ -1,0 +1,70 @@
+{% extends 'dr_shahida/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+           
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    
+                        <!-- FB Post Start -->
+                        <div class="mb-5">
+                            <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">{{lang.fb_page_title}}</h4>
+                            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                                <div class="fb-page" data-href="https://www.facebook.com/Dr.ShahidaBegumMinu/" data-tabs="timeline" data-width="" data-height="1200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Dr.ShahidaBegumMinu/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dr.ShahidaBegumMinu/">Dr. Shahida Begum Minu; Womens health</a></blockquote></div>
+                            </div>
+                        </div>
+                        <!-- FB Post End -->
+                   
+                </div>
+
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                    <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                        <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">{{lang.blog_post_title}}</h4>
+                    </div>
+                    <div class="row">
+                        {% for blog_post in blog_posts %}
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="bg-light rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="{{ blog_post.img.url }}" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="{% url 'blogdetailview' post_id=blog_post.id  %}">{{ blog_post.title }}</a>
+                            <p class="m-0">{{ blog_post.content }}</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="{% static 'img/user.jpg' %}" width="25" height="25" alt="">
+                                <small>{{ lang.doctor_name }}</small>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            {% endfor %}
+                        
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+    </div>
+    <!-- Blog End -->
+    
+{% endblock %}
+
+{% block footer %}
+{% include 'dr_shahida/footer.html' %}
+{% endblock %}
+ 
+</body>
+
+</html>

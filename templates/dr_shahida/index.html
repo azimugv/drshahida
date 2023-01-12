@@ -1,0 +1,222 @@
+{% extends 'dr_shahida/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid  py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">{{chamber_name}}</h5>
+                    <h1 class="display-1 text-white mb-md-4">{{lang.doctor_tagline}}</h1>
+                    <div class="pt-2">
+                        <a href="#appointment" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">{{lang.appointment}}</a>
+                        <a href="#services" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">{{lang.services}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+<!-- Blog Start -->
+<div class="container-fluid py-5" id="blog">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">{{lang.blog_title}}</h5>
+            <h1 class="display-4">{{lang.blog_tagline}}</h1>
+        </div>
+        <div class="row g-5">
+            {% for blog_post in blog_posts %}
+            <div class="col-xl-4 col-lg-6">
+                <div class="bg-light rounded overflow-hidden">
+                    <img class="img-fluid w-100" src="{{ blog_post.img.url }}" alt="">
+                    <div class="p-4">
+                        <a class="h3 d-block mb-3" href="{% url 'blogdetailview' post_id=blog_post.id  %}">{{ blog_post.title }}</a>
+                        <p class="m-0">{{ blog_post.content }}</p>
+                    </div>
+                    <div class="d-flex justify-content-between border-top p-4">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle me-2" src="{% static 'img/user.jpg' %}" width="25" height="25" alt="">
+                            <small>{{lang.doctor_name}}</small>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+        
+          <div class="col-12 text-center">
+            <a class="btn btn-primary py-3 px-5" href="{% url 'blog' %}">{{lang.blog_btn}}</a>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/about.jpg' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">{{lang.about_title}}</h5>
+                        <h1 class="display-4">{{lang.about_tagline}}</h1>
+                    </div>
+                    <p>{{lang.about_text}}</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
+                                <h6 class="mb-0"><small>{{lang.experience}}</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-solid fa-graduation-cap text-primary mb-3"></i>
+                               
+                                <h6 class="mb-0"><small>{{lang.degree1}}</small></h6>
+                                <h6 class="mb-0"><small>{{lang.degree2}}</small></h6>
+                               
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-solid fa-graduation-cap text-primary mb-3"></i>
+                            
+                                <h6 class="mb-0"><small>{{lang.degree3}}</small></h6>
+                                <h6 class="mb-0"><small>{{lang.degree4}}</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-solid fa-graduation-cap text-primary"></i>
+                                <h6 class="mb-0 p-2"> <small>{{lang.special_training}}</small>  </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5" id="services">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">{{lang.service_title}}</h5>
+                <h1 class="display-4">{{lang.service_tagline}}</h1>
+            </div>
+            <div class="row g-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-stethoscope text-white"></i>
+                        </div>
+                        <h4 class="mb-3">{{lang.service1}}</h4>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="http://127.0.0.1:8000/#appointment">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-procedures text-white"></i>
+                        </div>
+                        <h4 class="mb-3">{{lang.service2}}</h4>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="http://127.0.0.1:8000/#appointment">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+            
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-user-md text-white"></i>
+                        </div>
+                        <h4 class="mb-3">{{lang.service3}}</h4>
+                         <a class="btn btn-lg btn-primary rounded-pill" href="http://127.0.0.1:8000/#appointment">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Appointment Start -->
+    <div class="container-fluid  my-5 py-5" id="appointment">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">{{lang.chamber_title}}</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-2x fa-stethoscope text-white"></i>
+                            </div>
+                            <h4 class="mb-3">{{lang.chamber__name}}</h4>
+                            <p class="m-0">{{lang.chamber_address}}</p>
+                            <p class="m-0">
+                                {{lang.visiting_hour}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">{{lang.appointment_title}}</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                            <div class="service-icon mb-4">
+                                <i class="fa fa-2x fa-phone text-white"></i>
+                            </div>
+                            <h4 class="mb-3 ">{{lang.appointment_tag}}</h4>
+                            <p>
+                                <a class="btn btn-primary" href="+8801766663305">{{lang.appointment_btn}}</a>
+                            </p>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+<!--Youtube Video -->
+
+    
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'dr_shahida/footer.html' %}
+{% endblock %}
+
+  
+</body>
+
+</html>
