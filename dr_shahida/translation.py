@@ -37,6 +37,9 @@ my_dict = {
         'footer_address' : '৬ষ্ঠ তলা, রুম নং: ৬০৭, কে জাহান সেন্টার, হাউজ-১০৬, সদর রোড, বরিশাল - ৮২০০',
         'footer_email' : 'dr.shahida2007@yahoo.com',
         'footer_phone' : '01766-663305',
+        'footer_menu' : 'মেনু',
+        'footer_follow' : 'ফলো',
+        'footer_copy' : 'সমস্ত অধিকার সংরক্ষিত',
 
         'contact_title': 'কোনো প্রশ্ন?',
         'contact_tagline' : 'অনুগ্রহ করে বিনা দ্বিধায় আমাদের সাথে যোগাযোগ করুন',
@@ -53,11 +56,9 @@ my_dict = {
         'about': 'আমার সম্পর্কে',
         'services': 'সেবা সমুহ',
         'testimonials': 'প্রশংসাপত্র',
-        'footer_menu' : 'মেনু',
-        'footer_follow' : 'ফলো',
-        'footer_copy' : 'সমস্ত অধিকার সংরক্ষিত.',
+        
         'blog_btn': 'সব ব্লগ দেখুন',
-        'developed_by':'আজিম',
+        'developed_by':'মোঃ আব্দুল্লাহ আল আজিম',
         'developed': 'ডিজাইন ও ডেভেলপ করেছেন ',
 
         'testimonials_tagline' : 'রোগীরা আমাদের পরিষেবা সম্পর্কে যা বলেন',
@@ -108,6 +109,9 @@ my_dict = {
         'footer_address' : '5th Floor, Room no: 607, K Jahan Center, House-106, Sadar Road, Barisal - 8200',
         'footer_email' : 'dr.shahida2007@yahoo.com',
         'footer_phone' : '01766-663305',
+        'footer_menu' : 'Quick Links',
+        'footer_follow' : 'FOLLOW',
+        'footer_copy' : 'All rights reserved',
 
         'contact_title': 'Any Questions?',
         'contact_tagline' : 'Please Feel Free To Contact Us',
@@ -119,10 +123,9 @@ my_dict = {
         'about': 'About',
         'services': 'Services',
         'testimonials': 'Testimonials',
-        'footer_menu' : 'Quick Links',
-        'footer_follow' : 'FOLLOW',
+        
         'blog_btn': 'View All Blogs',
-        'developed_by' : 'Azim',
+        'developed_by' : 'Md Abdullah Al Azim',
         'developed': 'Designed & Developed by ',
 
         'testimonials_tagline' : 'Patients Say About Our Services',
