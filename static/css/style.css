@@ -134,7 +134,7 @@
 
 
 .service-item:hover a.btn {
-    
+
     opacity: 1;
 }
 
@@ -334,3 +334,20 @@
   .toggle input:checked~.labels::before {
     opacity: 1;
   }
+ .bg-light.rounded.overflow-hidden {
+    height: 400px;
+}
+
+.img-fluids {
+    height: 200px;
+}
+
+a.h3.d-block.mb-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 64px;
+}
