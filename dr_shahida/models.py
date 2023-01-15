@@ -9,7 +9,7 @@ STATUS = (
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    show_on_home = models.BooleanField(default=False)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     img = models.ImageField(upload_to='featured_image')

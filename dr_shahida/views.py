@@ -35,7 +35,7 @@ def set_lang(request, ln):
 # Changing language url http://127.0.0.1:8000/set_language/bn
 
 def index(request):
-    blog_posts = BlogPost.objects.all()
+    blog_posts = BlogPost.objects.filter(show_on_home='True')
     ln = get_lang(request)
     context = {
         'blog_posts': blog_posts,
