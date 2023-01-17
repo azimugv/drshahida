@@ -62,8 +62,10 @@ def testimonial(request):
 
 
 def contact(request):
+
     ln = get_lang(request)
     context = {
+        
         'lang': my_dict[ln],
         'selected_lang' : ln
     }

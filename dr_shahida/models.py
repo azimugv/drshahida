@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from phonenumber_field.modelfields import PhoneNumberField
 
 
 class BlogPost(models.Model):
@@ -18,11 +17,3 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class SerialNumber(models.Model):
-    serial_num = PhoneNumberField(blank=True)
-    
-
-    def __str__(self):
-        return self.serial_num
