@@ -20,3 +20,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dr_shahida.urls')),
 ]
+
+
+# Configure Admin Titles
+
+admin.site.site_header = "DR. Shahida Begum"
+admin.site.site_title = "DR. Shahida Begum"
+admin.site.index_title = "Welcome to Admin Dashboard"

@@ -1,51 +1,104 @@
-{% load i18n %}   
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-light mt-5 py-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">{{lang.footer_title}}</h4>
-                <p class="mb-4">{{lang.footer_tagline}}</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>{{lang.footer_address}}</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>{{lang.footer_email}}</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>{{lang.footer_phone}}</p>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">{{lang.footer_menu}}</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="{% url 'index' %}"><i class="fa fa-angle-right me-2"></i>{{lang.home}}</a>
-                    <a class="text-light mb-2" href="https://www.drshahida.com/#about"><i class="fa fa-angle-right me-2"></i>{{lang.about}}</a>
-                    <a class="text-light mb-2" href="{% url 'testimonial' %}"><i class="fa fa-angle-right me-2"></i>{{lang.testimonials}}</a>
-                    <a class="text-light mb-2" href="https://www.drshahida.com/#blog"><i class="fa fa-angle-right me-2"></i>{{lang.blog}}</a>
-                    <a class="text-light" href="https://www.drshahida.com/#appointment"><i class="fa fa-angle-right me-2"></i>{{lang.appointment}}</a>
-                </div>
-            </div>
+{% load i18n %}
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light mt-5 py-5">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h4
+          class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+        >
+          {{lang.footer_title}}
+        </h4>
+        <p class="mb-4">{{lang.footer_tagline}}</p>
+        <p class="mb-2">
+          <i class="fa fa-map-marker-alt text-primary me-3"></i
+          >{{lang.footer_address}}
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-envelope text-primary me-3"></i>{{lang.footer_email}}
+        </p>
+        <p class="mb-0">
+          <i class="fa fa-phone-alt text-primary me-3"></i>{{lang.footer_phone}}
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h4
+          class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+        >
+          {{lang.footer_menu}}
+        </h4>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-light mb-2" href="{% url 'index' %}"
+            ><i class="fa fa-angle-right me-2"></i>{{lang.home}}</a
+          >
+          <a class="text-light mb-2" href="https://www.drshahida.com/#about"
+            ><i class="fa fa-angle-right me-2"></i>{{lang.about}}</a
+          >
+          <a class="text-light mb-2" href="{% url 'testimonial' %}"
+            ><i class="fa fa-angle-right me-2"></i>{{lang.testimonials}}</a
+          >
+          <a class="text-light mb-2" href="https://www.drshahida.com/#blog"
+            ><i class="fa fa-angle-right me-2"></i>{{lang.blog}}</a
+          >
+          <a class="text-light" href="https://www.drshahida.com/#appointment"
+            ><i class="fa fa-angle-right me-2"></i>{{lang.appointment}}</a
+          >
+        </div>
+      </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">{{lang.footer_follow}}</h4>
-                <div class="d-flex">
-                    
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/Dr.ShahidaBegumMinu/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.youtube.com/@onlineteachingofgynecology3449"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h4
+          class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4"
+        >
+          {{lang.footer_follow}}
+        </h4>
+        <div class="d-flex">
+          <a
+            class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
+            href="https://www.facebook.com/Dr.ShahidaBegumMinu/"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-lg btn-primary btn-lg-square rounded-circle"
+            href="https://www.youtube.com/@onlineteachingofgynecology3449"
+            ><i class="fab fa-youtube"></i
+          ></a>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-<div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-md-0">&copy; <a class="text-primary" href="{% url 'index' %}">{{lang.doctor_name}}</a> {{lang.footer_copy}}</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0">{{lang.developed}}<a class="text-primary" href="https://www.fiverr.com/azimugv">{{lang.developed_by}}</a></p>
-            </div>
-        </div>
+<div
+  class="container-fluid bg-dark text-light border-top border-secondary py-4"
+>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-md-0">
+          &copy;
+          <a
+            class="text-primary"
+            href="https://www.facebook.com/Dr.ShahidaBegumMinu/"
+            >{{lang.doctor_name}}</a
+          >
+          {{lang.footer_copy}}
+        </p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0">
+          {{lang.developed}}<a
+            class="text-primary"
+            href="https://www.fiverr.com/azimugv"
+            >{{lang.developed_by}}</a
+          >
+        </p>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Footer End -->
 
-
 <!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+  ><i class="bi bi-arrow-up"></i
+></a>
