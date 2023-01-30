@@ -27,3 +27,4 @@ urlpatterns = [
 admin.site.site_header = "DR. Shahida Begum"
 admin.site.site_title = "DR. Shahida Begum"
 admin.site.index_title = "Welcome to Admin Dashboard"
+handler404 = 'dr_shahida.views.error_404_view'
